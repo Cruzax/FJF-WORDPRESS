@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40;
+}
+
+.btn-rdv {
+  background-color: #de0e1fca;
+  color: white;
+  padding: 6px 30px;
+  font-size: medium;
+}
+
+.btn-rdv::hover {
+  background-color: #de0e1f;
+}
+
+.validbutton {
+  padding: 6px 20px;
+}

@@ -1,0 +1,10 @@
+.hero_background {
+  background: url(/img/ferrariHero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.texte-zone{
+  padding: 10px 0;
+}
