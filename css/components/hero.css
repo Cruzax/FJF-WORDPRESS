@@ -1,13 +1,11 @@
 .hero_background {
-  background: url(/img/pissta-crop.jpg);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.42) 80%, rgba(0, 0, 0, 0.77) 100%), url(/img/pissta-crop.jpg) center center; 
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .texte-zone{
   padding: 10px 5px;
-  background-color: rgba(255, 255, 255, 0.852);
+  background-color: #ecececdf;
   border-style: solid;
 }
 
