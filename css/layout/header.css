@@ -8,6 +8,7 @@
   text-decoration: none;
   position: relative;
   padding-bottom: 3px;
+  font-size: large;
 }
 
 .nav-link-top:hover {

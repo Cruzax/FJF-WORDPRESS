@@ -6,7 +6,7 @@ body {
 .btn-rdv {
   background-color: #de0e1fca;
   color: white;
-  font-size: medium;
+  font-size: large;
   border-style: none;
 }
 
@@ -34,7 +34,7 @@ color: white;
 
 .h2{
   font-family: "Montserrat", sans-serif;
-
+  font-size: 40px;
 }
 
 .h3{

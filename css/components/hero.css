@@ -1,5 +1,5 @@
 .hero_background {
-  background: url(/img/pissta.jpg);
+  background: url(/img/pissta-crop.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,4 +13,8 @@
 
 .texte-zone:hover::placeholder{
 color: rgb(0, 0, 0);
+}
+
+.rdv_text{
+  font-size: xx-large;
 }
