@@ -1,10 +1,16 @@
 .hero_background {
-  background: url(/img/ferrariHero.png);
+  background: url(/img/pissta.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .texte-zone{
-  padding: 10px 0;
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.852);
+  border-style: solid;
+}
+
+.texte-zone:hover::placeholder{
+color: rgb(0, 0, 0);
 }

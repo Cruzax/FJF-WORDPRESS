@@ -3,26 +3,41 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 40;
-}
-
 .btn-rdv {
   background-color: #de0e1fca;
   color: white;
-  padding: 6px 30px;
   font-size: medium;
+  border-style: none;
 }
 
-.btn-rdv::hover {
-  background-color: #de0e1f;
+.btn-rdv:hover {
+  background-color: #DE0E1E;
 }
 
 .validbutton {
-  padding: 6px 20px;
+  padding: 6px 30px;
+  border-color: #DE0E1E;
+  background-color: #ffffffb1;
+}
+
+.validbutton:hover {
+background-color: #DE0E1E;
+border-color: white;
+color: white;
+}
+
+.h1{
+ font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.h2{
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.h3{
+  font-family: "Montserrat", sans-serif;
+
 }

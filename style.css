@@ -1,5 +1,6 @@
+@import "css/layout/header.css";
 @import "css/base/main.css";
 @import "css/components/hero.css";
 @import "css/layout/footer.css";
-@import "css/layout/header.css";
 @import "css/utils/variables.css";
+@import "css/components/bodytext.css";

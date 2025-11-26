@@ -1,0 +1,7 @@
+.separator {
+  border: none;
+  height: 4px;      /* thickness */
+  background: black; /* color */
+  margin: 40px 0;   /* spacing */
+  color: black;
+}
