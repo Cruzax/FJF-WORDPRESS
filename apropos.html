@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TITRE DE LA PAGE</title>
+    <title>FJF</title>
 
     <!-- Bootstrap -->
     <link
@@ -24,7 +24,6 @@
   </head>
 
   <body>
-
     <!-- ░░░ HEADER ░░░ -->
     <header class="topbar py-3">
       <div class="container-fluid">
@@ -35,11 +34,23 @@
 
           <div class="col d-flex justify-content-center">
             <nav class="d-flex align-items-center">
-              <a href="index.html" class="nav nav-link-top nav-item-box">Accueil</a>
-              <a href="prestations.html" class="nav nav-link-top nav-item-box">Prestations</a>
-              <a href="apropos.html" class="nav nav-link-top nav-item-box">À propos</a>
-              <a href="Rendez-vous.html" class="btn-rdv nav-link-top nav-item-box">Rendez-vous</a>
-              <a href="espace.html" class="nav-link-top nav-item-box">Espace clients</a>
+              <a href="index.html" class="nav nav-link-top nav-item-box"
+                >Accueil</a
+              >
+              <a href="prestations.html" class="nav nav-link-top nav-item-box"
+                >Prestations</a
+              >
+              <a href="apropos.html" class="nav nav-link-top nav-item-box"
+                >À propos</a
+              >
+              <a
+                href="Rendez-vous.html"
+                class="btn-rdv nav-link-top nav-item-box"
+                >Rendez-vous</a
+              >
+              <a href="espace.html" class="nav-link-top nav-item-box"
+                >Espace clients</a
+              >
             </nav>
           </div>
         </div>
@@ -47,14 +58,94 @@
     </header>
     <!-- ░░░ FIN HEADER ░░░ -->
 
-
     <!-- ░░░ CONTENU SPÉCIFIQUE DE LA PAGE ░░░ -->
-    <main class="container py-5">
-      <h1 class="text-center mb-4">Titre de la page</h1>
-      <p class="text-center">Contenu de la page...</p>
-    </main>
+    <section class="container py-5">
+      <!-- Titre + intro -->
+      <h1 class="titre text-center mb-4">A PROPOS</h1>
+      <p class="text-center mb-5">
+        Venez nous rencontrer directement au garage pour l’entretien et la
+        réparation de votre voiture ou de votre moto.
+      </p>
+
+      <!-- Bloc principal en 2 colonnes -->
+      <div class="row align-items-start">
+        <!-- COLONNE GAUCHE : photo + infos -->
+        <div class="col-lg-6 mb-4">
+          <img
+            src="img/logobatiment.png"
+            alt="Bâtiment FJF Automobiles"
+            class="img-fluid mb-3"
+          />
+          <a class="text-decoration-none text-black" href="tel:0381903890"
+            ><strong>Téléphone :</strong> 03 81 90 38 90</a
+          >
+          <p><strong>Horaires :</strong> Lundi au Vendredi 8h - 18h</p>
+          <p>
+            <strong>Adresse :</strong> Impasse de la Chevru, Rue d'Arcey, 25750
+            Arcey
+          </p>
+
+          <a
+            href="Rendez-vous.html"
+            class="texte-center btn-rdv nav-link-top nav-item-box mt-3"
+          >
+            Rendez-vous
+          </a>
+        </div>
+
+        <!-- COLONNE DROITE : Google Maps -->
+        <div class="col-lg-6 mb-4">
+          <!-- utilitaire Bootstrap pour garder le ratio -->
+          <div class="ratio ratio-4x3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.4074285021397!2d6.649556575880524!3d47.51858419405202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47926b554577e039%3A0x594d76ed15e889a4!2sFJF%20AUTOMOBILES!5e1!3m2!1sfr!2sfr!4v1764667825963!5m2!1sfr!2sfr"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ░░░ FIN CONTENU ░░░ -->
 
+    <section class="container py-5">
+      <h1 class="titre text-center mb-4">FOIRE AUX QUESTIONS</h1>
+      <h2>Quels sont vos horaires d'ouverture ?</h2>
+      <p>
+        Nous sommes ouverts du lundi au vendredi de 8h à 12h et de 13h30 à 18h.
+      </p>
+      <h2>
+        Proposez-vous des services de réparation pour tous les types de
+        véhicules ?
+      </h2>
+      <p>
+        Oui, nous proposons des services de réparation pour une large gamme de
+        véhicules, y compris les voitures, les motos et les véhicules
+        utilitaires.
+      </p>
+      <h2>Vous prenez les motos?</h2>
+      <p>Oui</p>
+
+      <h1 class="titre text-center mb-4">Avis Recent</h1>
+      <p>
+        "Service exceptionnel et équipe très professionnelle. Mon véhicule a été
+        réparé rapidement et à un prix raisonnable. Je recommande vivement FJF
+        Automobiles !" - Jean D.
+      </p>
+      <p>
+        "J'ai toujours eu une excellente expérience chez FJF Automobiles. Leur
+        personnel est compétent et amical. Ils prennent le temps d'expliquer les
+        réparations nécessaires." - Marie L.
+      </p>
+      <p>
+        "FJF Automobiles est mon garage de confiance depuis des années. Leur
+        transparence et leur honnêteté sont appréciables. Je n'irai nulle part
+        ailleurs pour l'entretien de ma voiture." - Paul S.
+      </p>
+    </section>
+    <!-- ░░░ FIN CONTENU ░░░ -->
 
     <!-- ░░░ FOOTER ░░░ -->
     <footer
@@ -64,7 +155,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 text-center">
-            <p class="mb-1">ZA – 1 impasse de la Chevru<br>25750 ARCEY</p>
+            <p class="mb-1">ZA – 1 impasse de la Chevru<br />25750 ARCEY</p>
             <p class="mb-1">Téléphone : 03.81.90.38.90</p>
             <p class="mb-0">e-mail : fjfautomobiles@sfr.fr</p>
           </div>
@@ -89,14 +180,20 @@
           <div class="text-center">
             <small class="text-white">
               © FJF Garage 2026 •
-              <a href="mentions.html" class="text-white text-decoration-none">Mentions légales</a> •
-              <a href="confidentialite.html" class="text-white text-decoration-none">Politique de confidentialité</a>
+              <a href="mentions.html" class="text-white text-decoration-none"
+                >Mentions légales</a
+              >
+              •
+              <a
+                href="confidentialite.html"
+                class="text-white text-decoration-none"
+                >Politique de confidentialité</a
+              >
             </small>
           </div>
         </div>
       </div>
     </footer>
     <!-- ░░░ FIN FOOTER ░░░ -->
-
   </body>
 </html>

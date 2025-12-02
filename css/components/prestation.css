@@ -1,0 +1,11 @@
+.car-line {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.car-underline {
+  width: 120px;
+  height: 3px;
+  background-color: #DE0E1E; /* rouge FJF */
+  margin: 0 auto; /* centre sous le texte / l'image */
+}

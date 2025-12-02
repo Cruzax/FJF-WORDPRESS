@@ -49,10 +49,27 @@
 
 
     <!-- ░░░ CONTENU SPÉCIFIQUE DE LA PAGE ░░░ -->
-    <main class="container py-5">
-      <h1 class="text-center mb-4">Titre de la page</h1>
-      <p class="text-center">Contenu de la page...</p>
-    </main>
+<main class="container my-5">
+
+  <div class="row justify-content-center align-items-center">
+
+    <div class="col-12 col-md-4 text-center text-md-start">
+      <p class="m-0 car-line"><!-- <?php echo $voiture; ?> -->$voiture</p>
+      <p class="m-0 car-line"><!-- <?php echo $puissance; ?> -->$puissance</p>
+      <p class="m-0 car-line"><!-- <?php echo $carburant; ?> -->$carburant</p>
+    </div>
+
+    <!-- IMAGE VOITURE -->
+    <div class="col-10 col-md-4 text-center">
+      <img src="img/voiture_clients.png"
+           alt="Votre véhicule"
+           class="img-fluid d-block mx-auto">
+    </div>
+
+  </div>
+
+</main>
+
     <!-- ░░░ FIN CONTENU ░░░ -->
 
 
