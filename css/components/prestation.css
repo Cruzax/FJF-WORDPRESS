@@ -1,11 +1,23 @@
-.car-line {
-  font-size: 1.4rem;
-  font-weight: 600;
+.card_presta .icon {
+  font-size: 3rem;
+  color: lightseagreen;
 }
 
-.car-underline {
-  width: 120px;
-  height: 3px;
-  background-color: #DE0E1E; /* rouge FJF */
-  margin: 0 auto; /* centre sous le texte / l'image */
+.card-text_presta {
+  color: gray;
+}
+
+.card_presta {
+  transition: all 0.5s;
+}
+
+.card_presta:hover {
+  background-color: #DE0E1E;
+  color: #fff;
+}
+
+.card_presta:hover .icon,
+.card_presta:hover .text_rouge,
+.card_presta:hover .card-text_presta {
+  color: #fff;
 }

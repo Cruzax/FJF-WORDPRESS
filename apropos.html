@@ -76,11 +76,11 @@
             alt="Bâtiment FJF Automobiles"
             class="img-fluid mb-3"
           />
-          <a class="text-decoration-none text-black" href="tel:0381903890"
+          <a class="text-decoration-none text-black textmid" href="tel:0381903890"
             ><strong>Téléphone :</strong> 03 81 90 38 90</a
           >
-          <p><strong>Horaires :</strong> Lundi au Vendredi 8h - 18h</p>
-          <p>
+          <p class="textmid text-black"><strong>Horaires :</strong> Lundi au Vendredi 8h - 18h</p>
+          <p class="textmid text-black">
             <strong>Adresse :</strong> Impasse de la Chevru, Rue d'Arcey, 25750
             Arcey
           </p>
@@ -108,42 +108,155 @@
         </div>
       </div>
     </section>
-    <!-- ░░░ FIN CONTENU ░░░ -->
 
     <section class="container py-5">
       <h1 class="titre text-center mb-4">FOIRE AUX QUESTIONS</h1>
-      <h2>Quels sont vos horaires d'ouverture ?</h2>
-      <p>
-        Nous sommes ouverts du lundi au vendredi de 8h à 12h et de 13h30 à 18h.
-      </p>
-      <h2>
-        Proposez-vous des services de réparation pour tous les types de
-        véhicules ?
-      </h2>
-      <p>
-        Oui, nous proposons des services de réparation pour une large gamme de
-        véhicules, y compris les voitures, les motos et les véhicules
-        utilitaires.
-      </p>
-      <h2>Vous prenez les motos?</h2>
-      <p>Oui</p>
 
-      <h1 class="titre text-center mb-4">Avis Recent</h1>
-      <p>
-        "Service exceptionnel et équipe très professionnelle. Mon véhicule a été
-        réparé rapidement et à un prix raisonnable. Je recommande vivement FJF
-        Automobiles !" - Jean D.
-      </p>
-      <p>
-        "J'ai toujours eu une excellente expérience chez FJF Automobiles. Leur
-        personnel est compétent et amical. Ils prennent le temps d'expliquer les
-        réparations nécessaires." - Marie L.
-      </p>
-      <p>
-        "FJF Automobiles est mon garage de confiance depuis des années. Leur
-        transparence et leur honnêteté sont appréciables. Je n'irai nulle part
-        ailleurs pour l'entretien de ma voiture." - Paul S.
-      </p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item rounded-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button rounded-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              1. Puis-je venir sans rendez-vous ?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <hr class="my-0 mx-3" />
+            <div class="accordion-body">
+              Oui, vous pouvez passer directement au garage. Cependant, pour
+              éviter l’attente, on recommande de prendre rendez-vous à l’avance.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item my-4 rounded-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button rounded-3 collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              2. Combien de temps dure une prestation classique ?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <hr class="my-0 mx-3" />
+            <div class="accordion-body">
+              Cela dépend du service : une vidange prend environ 30 minutes,
+              alors qu’une réparation carrosserie peut nécessiter 1 à 3 jours
+              selon les dégâts.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item my-4 rounded-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button rounded-3 collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              3. Est-ce que vous utilisez des pièces d’origine ?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <hr class="my-0 mx-3" />
+            <div class="accordion-body">
+              Oui. Nous privilégions les pièces d’origine constructeur ou des
+              pièces de qualité équivalente selon la demande du client.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="titre text-center mb-4">AVIS RECENT</h1>
+      <div class="container">
+        <div class="row gap-5 justify-content-center">
+          <div class="card-avis" style="width: 18rem">
+            <img
+              src="img/moiiacarre.jpg"
+              class="card-img-top img-avis"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title-avis pt-3">Ben D.</h5>
+              <p>
+                Service exceptionnel et équipe très professionnelle. Mon
+                véhicule a été réparé rapidement et à un prix raisonnable. Je
+                recommande vivement FJF Automobiles !
+              </p>
+            </div>
+          </div>
+
+          <div class="card-avis" style="width: 18rem">
+            <img
+              src="img/jordaniacarre.jpg"
+              class="card-img-top img-avis"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title-avis pt-3">Jordan B.</h5>
+              <p>
+                FJF Automobiles est mon garage de confiance depuis des années.
+                Leur transparence et leur honnêteté sont appréciables. Je n'irai
+                nulle part ailleurs pour l'entretien de ma voiture.
+              </p>
+            </div>
+          </div>
+          <div class="card-avis" style="width: 18rem">
+            <img
+              src="img/ninaiacarre.png"
+              class="card-img-top img-avis"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title-avis pt-3">Nina R.</h5>
+              <p>
+                J'ai toujours eu une excellente expérience chez FJF Automobiles.
+                Leur personnel est compétent et amical. Ils prennent le temps
+                d'expliquer les réparations nécessaires.
+              </p>
+            </div>
+          </div>
+          <div class="card-avis" style="width: 18rem">
+            <img
+              src="img/lucasia2carre.jpg"
+              class="card-img-top img-avis"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title-avis pt-3">Lucas S.</h5>
+              <p>
+                Service exceptionnel et équipe très professionnelle. Mon
+                véhicule a été réparé rapidement et à un prix raisonnable. Je
+                recommande vivement FJF Automobiles !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- ░░░ FIN CONTENU ░░░ -->
 
@@ -195,5 +308,10 @@
       </div>
     </footer>
     <!-- ░░░ FIN FOOTER ░░░ -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

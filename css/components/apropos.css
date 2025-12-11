@@ -2,3 +2,26 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+.accordion {
+  --bs-accordion-active-bg: #ffffff;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+  border: 2px solid #00000049;
+  box-shadow: 5px 5px #de0e1f77;
+}
+
+.accordion-button.collapsed {
+  border: 1px solid #d8d8d8;
+}
+
+.accordion-collapse {
+  transition: all 0.3s;
+}
+
+.textmid {
+    text-align: center;
+}
