@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
 <html lang="fr">
   <head>
+    <!-- Métadonnées et liens vers les ressources externes (CSS, polices, favicon) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FJF Garage</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <meta name="description" content="FJF Automobiles — Carrosserie, peinture et mécanique toutes marques à Arcey. Prenez rendez-vous en ligne." />
+    <link rel="icon" href="img/FJFlogoblanc.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,48 +19,27 @@
   </head>
 
   <body>
+    <!-- Section principale avec fond personnalisé et formulaire de recherche -->
     <section class="hero_background">
-      <header class="topbar py-3">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-auto">
-              <img src="img/FJFlogo.png" class="logo" alt="FJF Automobiles" />
-            </div>
-
-            <div class="col d-flex justify-content-center">
-              <nav class="d-flex align-items-center">
-                <a href="index.html" class="nav nav-link-top nav-item-box"
-                  >Accueil</a
-                >
-                <a href="prestations.html" class="nav nav-link-top nav-item-box"
-                  >Prestations</a
-                >
-                <a href="apropos.html" class="nav nav-link-top nav-item-box"
-                  >À propos</a
-                >
-                <a
-                  href="Rendez-vous.html"
-                  class="btn-rdv nav-link-top nav-item-box"
-                  >Rendez-vous</a
-                >
-                <a href="#" class="nav-link-top nav-item-box">Espace clients</a>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
+      <!-- Inclusion dynamique de l'en-tête -->
+      <div data-include="partials/header.html"></div>
       <div class="py-3"></div>
       <div class="container text-center mt-5">
+        <!-- Champ de recherche par immatriculation -->
         <div class="row justify-content-center mb-3">
           <div class="col-10 col-md-4 col-lg-3">
             <input
+              id="plate-input"
               type="text"
               placeholder="Immatriculation.."
               class="texte-zone input w-100"
+              aria-label="Immatriculation"
             />
+            <div id="plate-result" class="text-center mt-2" aria-live="polite"></div>
           </div>
         </div>
 
+        <!-- Séparateur visuel "OU" -->
         <div class="row justify-content-center mb-3">
           <div class="col-auto">
             <img
@@ -69,6 +49,7 @@
             />
           </div>
         </div>
+        <!-- Formulaire de recherche par caractéristiques du véhicule -->
         <form action="">
           <div class="row justify-content-center g-2 mb-4">
             <div class="col-6 col-md-3">
@@ -106,20 +87,27 @@
 
           <div class="row justify-content-end mb-4">
             <div class="col-auto">
-              <button class="validbutton">Valider</button>
+              <!-- Bouton de validation du formulaire -->
+              <button class="validbutton" type="button" id="plate-search-btn">Valider</button>
             </div>
           </div>
         </form>
+        <!-- Slogan d'incitation à la prise de rendez-vous -->
         <h2 class="rdv_text text-white py-5">
           Prenez Rendez vous en ligne sans plus attendre
         </h2>
 
+        <!-- Lien vers la page de prise de rendez-vous -->
         <a href="Rendez-vous.html" class="btn-rdv nav-link-top nav-item-box">Rendez-Vous</a>
 
         <div class="py-4"></div>
       </div>
     </section>
 
+    <!-- Script pour la gestion de la recherche de véhicules -->
+    <script src="assets/js/vehicles.js" defer></script>
+
+    <!-- Présentation du garage et de ses services -->
     <div class="container">
       <div class="row py-3">
         <div
@@ -137,17 +125,20 @@
         </div>
 
         <div class="col-6">
+          <!-- Image du garage -->
           <img src="img/Garage.png" class="img-fluid" alt="Garage de FJF" />
         </div>
       </div>
       <hr class="separator" />
 
+      <!-- Slogan de confiance -->
       <div class="d-flex justify-content-center align-items-center text-center">
         <h2 class="h2 py-3">
           FJF Automobiles, votre garage de confiance a Arcey
         </h2>
       </div>
 
+      <!-- Description détaillée des services et de la philosophie du garage -->
       <p class="text-center py-5">
         Depuis plusieurs années, FJF Automobiles met son savoir-faire au service
         de tous les conducteurs. Notre équipe qualifiée assure l’entretien
@@ -162,50 +153,9 @@
       </p>
     </div>
 
-    <footer
-      class="container-fluid text-white py-5"
-      style="background: url('img/Rectangle.png') center/cover no-repeat"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <p class="mb-1">ZA – 1 impasse de la Chevru<br />25750 ARCEY</p>
-            <p class="mb-1">Téléphone : 03.81.90.38.90</p>
-            <p class="mb-0">e-mail : fjfautomobiles@sfr.fr</p>
-          </div>
-
-          <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-            <img
-              src="/img/FJFlogoblanc.png"
-              class="img-fluid mb-3"
-              alt="FJF Logo"
-              style="max-height: 80px"
-            />
-
-            <div class="d-flex gap-4"></div>
-          </div>
-
-          <div class="col-md-4 mb-4 text-center">
-            <p class="mb-1">Lundi au Vendredi <br /></p>
-            <p class="mb-1">De 8h 12h à 13h30 18h</p>
-            <p class="mb-0">Samedi/Dimanche Fermé</p>
-          </div>
-        </div>
-        <div class="container mt-auto pt-3 border-top border-light">
-          <div class="text-center">
-            <small class="text-white">
-              © FJF Garage 2026 •
-              <a href="#" class="text-white text-decoration-none"
-                >Mentions légales</a
-              >
-              •
-              <a href="#" class="text-white text-decoration-none"
-                >Politique de confidentialité</a
-              >
-            </small>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Inclusion dynamique du pied de page -->
+    <div data-include="partials/footer.html"></div>
+    <!-- Script pour l'inclusion dynamique des partials (header/footer) -->
+    <script src="assets/js/includes.js" defer></script>
   </body>
 </html>

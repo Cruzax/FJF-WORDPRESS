@@ -16,6 +16,11 @@
   background-color: #50514d;
 }
 
+.nav-link-top.active {
+  color: white;
+  background-color: #DE0E1E;
+}
+
 .topbar {
   width: 100%;
 }

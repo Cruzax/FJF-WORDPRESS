@@ -1,8 +1,8 @@
-@import "css/layout/header.css";
-@import "css/base/main.css";
-@import "css/components/hero.css";
-@import "css/layout/footer.css";
 @import "css/utils/variables.css";
+@import "css/base/main.css";
+@import "css/layout/header.css";
+@import "css/layout/footer.css";
+@import "css/components/hero.css";
 @import "css/components/bodytext.css";
 @import "css/components/pagerdv.css";
 @import "css/components/prestation.css";

@@ -26,6 +26,14 @@ border-color: white;
 color: white;
 }
 
+/* Accessibility: visible focus for keyboard users */
+.nav-link-top:focus-visible,
+.btn-rdv:focus-visible,
+.validbutton:focus-visible {
+  outline: 3px solid #ffb3b3;
+  outline-offset: 2px;
+}
+
 .h1{
  font-size: 40px;
   font-family: "Montserrat", sans-serif;
@@ -39,4 +47,18 @@ color: white;
 
 .h3{
   font-family: "Montserrat", sans-serif;
+}
+
+/* UI tweaks */
+.btn-rdv {
+  padding: 0.55rem 1rem;
+  
+}
+
+.logo {
+  max-height: 64px;
+}
+
+#plate-result .card {
+  background: rgba(255,255,255,0.95);
 }
