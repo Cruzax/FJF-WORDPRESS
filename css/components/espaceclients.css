@@ -1,0 +1,37 @@
+.espace-clients-page {
+  color: #1f2937;
+}
+
+.ec-hero {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff 0%, #f9fafb 100%);
+}
+
+.ec-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.ec-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.ec-card-title {
+  font-weight: 700;
+}
+
+.ec-list li,
+.ec-docs li {
+  padding: 0.35rem 0;
+}
+
+.ec-table-wrap {
+  overflow-x: auto;
+}
+
+.ec-docs i {
+  color: #de0e1e;
+}

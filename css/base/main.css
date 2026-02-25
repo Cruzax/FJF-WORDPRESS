@@ -1,6 +1,28 @@
+:root {
+  --bs-body-font-family: "Poppins", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+select,
+textarea,
+label,
+span,
+li {
+  font-family: inherit;
 }
 
 .btn-rdv {
@@ -36,17 +58,17 @@ color: white;
 
 .h1{
  font-size: 40px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 
 }
 
 .h2{
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
 }
 
 .h3{
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* UI tweaks */
