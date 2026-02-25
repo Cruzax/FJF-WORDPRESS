@@ -1,7 +1,55 @@
-Project notes — partial includes
+🚗 FJF Automobiles – Site vitrine & espace client
 
-- Header and footer are now split into `partials/header.html` and `partials/footer.html`.
-- `assets/js/includes.js` injects partials into elements that have `data-include="partials/xxx.html"`.
-- For local testing, serve the folder with a static server (e.g., `python -m http.server 8000`) because `fetch()` may be blocked when opening files via `file://`.
+Site web du garage FJF Automobiles avec présentation des services, prise de rendez-vous et espace client pour le suivi des véhicules.
 
-If you want, I can also add a build step (Gulp, eleventy, or a simple `npm` script) to produce a single static site without client-side includes.
+✨ Fonctionnalités
+
+Page d’accueil avec présentation du garage
+
+Pages services (prestations, entretien, etc.)
+
+Prise de rendez-vous
+
+Espace client :
+
+Profil client
+
+Informations du véhicule
+
+Kilométrage
+
+Prochain entretien
+
+Design responsive (PC / tablette / mobile)
+
+Interface moderne et claire
+
+🛠️ Technologies utilisées
+
+HTML / CSS / JavaScript
+
+PHP
+
+WordPress (thème personnalisé)
+
+Bootstrap / Tailwind
+
+MySQL
+
+Google Fonts (Poppins)
+
+🎯 Objectif du projet
+
+Ce projet est réalisé dans le cadre de ma formation Web & Web Mobile.
+L’objectif est de :
+
+Créer un site professionnel pour un vrai client (FJF Automobiles)
+
+Mettre en pratique le front-end et le back-end
+
+Proposer une interface claire pour les clients du garage
+
+👨‍💻 Auteur
+
+Benjamin Scheurer
+Développeur web junior (fullstack en formation)
