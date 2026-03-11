@@ -1,0 +1,84 @@
+/* Cruziplug - Voiture Clients Admin Styles */
+
+/* Formulaire en lignes */
+.voiture-form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px 24px;
+    max-width: 900px;
+    margin-bottom: 12px;
+}
+
+.voiture-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1d2327;
+}
+
+.voiture-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.voiture-field input:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.voiture-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.voiture-field textarea:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.voiture-field-full {
+    grid-column: 1 / -1;
+}
+
+.voiture-field .description {
+    font-weight: 400;
+    color: #757575;
+    font-style: italic;
+}
+
+/* Tableau des véhicules */
+#voiture-table {
+    margin-top: 16px;
+}
+
+#voiture-table th,
+#voiture-table td {
+    padding: 10px 12px;
+    vertical-align: middle;
+}
+
+/* Tri */
+.sortable { cursor: pointer; user-select: none; }
+.sortable:hover { background: #f0f0f1; }
+.sort-arrow { font-size: 12px; margin-left: 4px; color: #999; }
+.sort-arrow.asc::after { content: '▲'; }
+.sort-arrow.desc::after { content: '▼'; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .voiture-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

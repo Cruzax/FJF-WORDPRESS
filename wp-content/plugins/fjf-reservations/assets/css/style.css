@@ -1,0 +1,433 @@
+/* ======================================================
+   FJF Réservations - Design System
+   Style moderne, sobre, premium (admin plugin)
+   ====================================================== */
+
+/* === VARIABLES GLOBALES :root === */
+:root {
+    --fjf-color-primary: #de0e1e;
+    --fjf-color-primary-hover: #bf0f1c;
+    --fjf-color-bg: #f6f7f9;
+    --fjf-color-card: #ffffff;
+    --fjf-color-border: #d9dde3;
+    --fjf-color-text: #0f2747;
+    --fjf-color-text-soft: #4b5563;
+    --fjf-color-success: #16a34a;
+    --fjf-color-waiting: #f59e0b;
+    --fjf-color-danger: #dc2626;
+    --fjf-color-focus: rgba(222, 14, 30, 0.18);
+
+    --fjf-radius-sm: 8px;
+    --fjf-radius-md: 12px;
+    --fjf-radius-lg: 16px;
+
+    --fjf-shadow-soft: 0 8px 24px rgba(15, 39, 71, 0.05);
+    --fjf-shadow-hover: 0 12px 28px rgba(15, 39, 71, 0.08);
+
+    --fjf-space-1: 6px;
+    --fjf-space-2: 10px;
+    --fjf-space-3: 14px;
+    --fjf-space-4: 18px;
+    --fjf-space-5: 24px;
+    --fjf-space-6: 32px;
+}
+
+/* === BODY GLOBAL === */
+body {
+    background: var(--fjf-color-bg);
+    color: var(--fjf-color-text);
+    font-family: "Poppins", sans-serif;
+}
+
+/* === TITRES === */
+h1,
+h2,
+h3,
+.fjf-title,
+.fjf-section-title {
+    color: var(--fjf-color-text);
+    letter-spacing: 0.01em;
+}
+
+/* === CARTES / SECTIONS === */
+.fjf-card,
+.fjf-panel,
+.fjf-admin-table-wrapper {
+    background: var(--fjf-color-card);
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    box-shadow: var(--fjf-shadow-soft);
+}
+
+.fjf-section {
+    margin-bottom: var(--fjf-space-6);
+}
+
+.fjf-muted {
+    color: var(--fjf-color-text-soft);
+}
+
+/* === ALERTES === */
+.fjf-alert,
+.fjf-success {
+    border: 1px solid #bce3c7;
+    background: #ecfdf3;
+    color: #0f5132;
+    border-radius: var(--fjf-radius-sm);
+    padding: 12px 14px;
+}
+
+/* === BOUTONS === */
+.fjf-btn,
+.fjf-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.fjf-btn:hover,
+.fjf-actions .button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(15, 39, 71, 0.14);
+}
+
+.fjf-btn:focus-visible,
+.fjf-actions .button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--fjf-color-focus);
+}
+
+.fjf-btn-primary {
+    background: var(--fjf-color-primary);
+    border-color: var(--fjf-color-primary);
+    color: #fff;
+    padding: 11px 22px;
+}
+
+.fjf-btn-primary:hover {
+    background: var(--fjf-color-primary-hover);
+    border-color: var(--fjf-color-primary-hover);
+}
+
+/* === TABLEAUX === */
+.fjf-admin-table {
+    margin-top: 8px;
+    margin-bottom: 28px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    overflow: hidden;
+    table-layout: fixed;
+    background: #fff;
+    width: 100%;
+}
+
+.fjf-admin-table thead th {
+    background: #f3f5f8;
+    color: var(--fjf-color-text);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--fjf-color-border);
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+
+.fjf-admin-table th,
+.fjf-admin-table td {
+    padding: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fjf-admin-table tbody tr:nth-child(even) {
+    background: #fbfcfe;
+}
+
+.fjf-admin-table tbody tr:hover {
+    background: #f6f9ff;
+}
+
+/* === BADGES === */
+.fjf-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.fjf-badge-en_attente,
+.fjf-statut-en_attente {
+    background-color: #fff7e9;
+    color: #9a6700;
+    border-color: #fbd38d;
+}
+
+.fjf-badge-valide,
+.fjf-badge-disponible,
+.fjf-statut-valide {
+    background-color: #ecfdf3;
+    color: #166534;
+    border-color: #86efac;
+}
+
+.fjf-badge-refuse,
+.fjf-badge-indisponible,
+.fjf-statut-refuse {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+/* === BOUTONS D'ACTION === */
+.fjf-actions,
+.fjf-actions-row {
+    padding-left: 2px;
+    min-width: 170px;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fjf-actions .button,
+.fjf-actions-row .button {
+    font-size: 11px;
+    padding: 4px 8px;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.fjf-btn-en-attente.button {
+    background: #fff6e8;
+    border-color: #f7d79f;
+    color: #8a5a00;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+
+.fjf-btn-en-attente.button:hover {
+    background: #fdecc8;
+    border-color: #f3c97d;
+    color: #704800;
+}
+
+.fjf-btn-valide.button {
+    background: #ecfdf3;
+    border-color: #86efac;
+    color: #166534;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+
+.fjf-btn-valide.button:hover {
+    background: #d1fae5;
+    border-color: #6ee7b7;
+    color: #14532d;
+}
+
+.fjf-btn-refuse.button {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #991b1b;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+
+.fjf-btn-refuse.button:hover {
+    background: #fee2e2;
+    border-color: #f87171;
+    color: #7f1d1d;
+}
+
+.button-link-delete {
+    background: var(--fjf-color-primary) !important;
+    border-color: var(--fjf-color-primary-hover) !important;
+    color: #fff !important;
+}
+
+.button-link-delete:hover {
+    background: var(--fjf-color-primary-hover) !important;
+    border-color: #9f0f18 !important;
+    color: #fff !important;
+}
+
+/* === FORMULAIRES INLINE === */
+.fjf-inline-form {
+    display: inline-block;
+    margin: 0;
+}
+
+.fjf-slot-toggle-form {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fjf-slot-toggle-form .button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 11px;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fjf-slot-link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fjf-slot-link.button {
+    padding: 0;
+    font-size: 11px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fjf-slot-toggle-disponible.button {
+    background: #fff;
+    border-color: #d1d5db;
+    color: #374151;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.fjf-slot-toggle-disponible.button:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1f2937;
+}
+
+/* === GRILLE DE PLANNING === */
+.fjf-admin-planning-wrap {
+    margin-top: 12px;
+    overflow-x: auto;
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    background: #fff;
+}
+
+.fjf-admin-planning {
+    min-width: 900px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+
+.fjf-admin-planning thead th {
+    background: #f3f5f8;
+    color: var(--fjf-color-text);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--fjf-color-border);
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fjf-admin-planning tbody th,
+.fjf-admin-planning tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    border: 1px solid var(--fjf-color-border);
+    height: 44px;
+    width: 120px;
+    overflow: hidden;
+}
+
+.fjf-admin-planning tbody th {
+    background: #f9fafb;
+    font-weight: 600;
+    padding: 8px 4px;
+    text-align: center;
+    min-width: 50px;
+}
+
+.fjf-admin-planning tbody tr:nth-child(even) td {
+    background: #fbfcfe;
+}
+
+.fjf-admin-planning tbody tr:hover td {
+    background: #f6f9ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .fjf-admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .fjf-actions,
+    .fjf-actions-row {
+        min-width: 220px;
+        flex-direction: column;
+    }
+
+    .fjf-admin-planning {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .fjf-admin-table th,
+    .fjf-admin-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .fjf-actions .button,
+    .fjf-actions-row .button {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}

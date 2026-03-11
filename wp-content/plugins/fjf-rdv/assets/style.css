@@ -1,0 +1,871 @@
+/* ======================================================
+   FJF Automobiles - Base Design System
+   Style moderne, sobre, premium (frontend + admin plugin)
+   ====================================================== */
+
+/* === VARIABLES GLOBALES :root === */
+:root {
+    --fjf-color-primary: #de0e1e;
+    --fjf-color-primary-hover: #bf0f1c;
+    --fjf-color-bg: #f6f7f9;
+    --fjf-color-card: #ffffff;
+    --fjf-color-border: #d9dde3;
+    --fjf-color-text: #0f2747;
+    --fjf-color-text-soft: #4b5563;
+    --fjf-color-success: #16a34a;
+    --fjf-color-waiting: #f59e0b;
+    --fjf-color-danger: #dc2626;
+    --fjf-color-focus: rgba(222, 14, 30, 0.18);
+
+    --fjf-radius-sm: 8px;
+    --fjf-radius-md: 12px;
+    --fjf-radius-lg: 16px;
+
+    --fjf-shadow-soft: 0 8px 24px rgba(15, 39, 71, 0.05);
+    --fjf-shadow-hover: 0 12px 28px rgba(15, 39, 71, 0.08);
+
+    --fjf-space-1: 6px;
+    --fjf-space-2: 10px;
+    --fjf-space-3: 14px;
+    --fjf-space-4: 18px;
+    --fjf-space-5: 24px;
+    --fjf-space-6: 32px;
+}
+
+/* === ALIGNEMENT AVEC LE SITE SOURCE (FJF-WORDPRESS-1) === */
+:root {
+    --bs-body-font-family: "Poppins", sans-serif;
+    --bs-danger: #de0e1e;
+    --bs-danger-rgb: 222, 14, 30;
+}
+
+/* === BODY (option globale + safe scope) === */
+body,
+.fjf-theme {
+    background: var(--fjf-color-bg);
+    color: var(--fjf-color-text);
+    font-family: "Poppins", sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Version site source: classes utilitaires deja presentes dans le HTML statique */
+.text_rouge {
+    color: #de0e1e;
+}
+
+.btn-danger {
+    --bs-btn-bg: #de0e1e;
+    --bs-btn-border-color: #de0e1e;
+    --bs-btn-hover-bg: #c90d1b;
+    --bs-btn-hover-border-color: #c90d1b;
+    --bs-btn-active-bg: #b60c18;
+    --bs-btn-active-border-color: #b60c18;
+}
+
+.btn-outline-danger {
+    --bs-btn-color: #de0e1e;
+    --bs-btn-border-color: #de0e1e;
+    --bs-btn-hover-bg: #de0e1e;
+    --bs-btn-hover-border-color: #de0e1e;
+    --bs-btn-active-bg: #de0e1e;
+    --bs-btn-active-border-color: #de0e1e;
+}
+
+/* Bouton RDV arrondi (hors top nav) */
+.btn-rdv {
+    background-color: #de0e1e;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-rdv:hover {
+    background-color: #c90d1b;
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+/* On exclut le top nav de cet arrondi */
+.topbar .btn-rdv,
+.nav-link-top.btn-rdv {
+    border-radius: 0;
+    transform: none;
+}
+
+/* Bloc A propos en carte */
+.apropos-card,
+.a-propos-card,
+.apropos-wrap {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: var(--fjf-shadow-soft);
+    padding: 20px;
+}
+
+.titre {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.accordion {
+    --bs-accordion-active-bg: #ffffff;
+    --bs-accordion-active-color: #111827;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion .accordion-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+    border: 1px solid #f3b2b8;
+    box-shadow: 0 6px 16px rgba(222, 14, 30, 0.14);
+}
+
+/* === BANNIERE / HERO - COMPAT ESPACE CLIENT === */
+.espace-clients-page {
+    color: #1f2937;
+}
+
+.ec-hero,
+.fjf-hero {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #fff 0%, #f9fafb 100%);
+}
+
+.ec-title {
+    font-weight: 700;
+    margin: 0;
+}
+
+.ec-card,
+.fjf-profile-card,
+.fjf-vehicle-card,
+.fjf-appointment-card,
+.fjf-documents-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.ec-card-title {
+    font-weight: 700;
+}
+
+.ec-list li,
+.ec-docs li {
+    padding: 0.35rem 0;
+}
+
+.ec-table-wrap {
+    overflow-x: auto;
+}
+
+.ec-docs i {
+    color: #de0e1e;
+}
+
+/* === PLANNING - BASE GRAPHIQUE IDENTIQUE === */
+.planning-wrap {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.planning-title {
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.planning-table {
+    min-width: 1000px;
+}
+
+.planning-table thead th {
+    background: #f3f4f6;
+    color: #1f2937;
+    border-color: #e5e7eb;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.planning-table tbody td,
+.planning-table tbody th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.92rem;
+}
+
+.hour-col {
+    font-weight: 600;
+    background: #f9fafb;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+.slot {
+    color: #6c757d;
+}
+
+.planning-table tbody td.slot {
+    padding: 0;
+}
+
+.fjf-slot-form {
+    margin: 0;
+}
+
+.slot-action-btn {
+    width: 100%;
+    height: 100%;
+    min-height: 42px;
+    border: 0;
+    background: #fff;
+    color: #de0e1e;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.slot-action-btn:hover {
+    background: #de0e1e;
+    color: #fff;
+}
+
+.slot-action-btn--selected {
+    background: #de0e1e;
+    color: #fff;
+}
+
+.slot-action-btn:focus-visible {
+    outline: 2px solid #ffb3b3;
+    outline-offset: -2px;
+}
+
+.slot-action-btn--unavailable,
+.slot-action-btn:disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.slot-lunch {
+    background: #e5e7eb;
+    color: #6c757d;
+}
+
+/* ======================================================
+   COMPATIBILITE COMPLETE AVEC LE HTML DE BASE FJF
+   (classes reprises du site statique pour coller au rendu)
+   ====================================================== */
+
+/* Header / nav */
+.logo {
+    height: 55px;
+}
+
+.topbar {
+    width: 100%;
+}
+
+.nav-item-box {
+    padding: 8px 30px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-item-box:hover {
+    background-color: #50514d;
+}
+
+.nav-link-top {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 3px;
+    font-size: large;
+}
+
+.nav-link-top:hover {
+    color: #fff;
+    background-color: #50514d;
+}
+
+.nav-link-top.active {
+    color: #fff;
+    background-color: #de0e1e;
+}
+
+.img-ou {
+    width: 60px;
+    padding: 20px 0;
+}
+
+.nav-link-top:focus-visible,
+.btn-rdv:focus-visible {
+    outline: 3px solid #ffb3b3;
+    outline-offset: 2px;
+}
+
+/* Hero legacy */
+.hero_background {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.42) 80%, rgba(0, 0, 0, 0.77) 100%), url(/img/pissta-crop.jpg) center center;
+    background-size: cover;
+}
+
+.texte-zone {
+    padding: 10px 5px;
+    background-color: #ecececdf;
+    border-style: solid;
+}
+
+.texte-zone:hover::placeholder {
+    color: #000;
+}
+
+.rdv_text {
+    font-size: xx-large;
+}
+
+/* Sections prestations */
+.presta-hero {
+    border: none;
+}
+
+.presta-vehicle-title {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.presta-vehicle-img {
+    max-width: 220px;
+}
+
+.card_presta {
+    transition: all 0.5s;
+}
+
+.card_presta .icon {
+    font-size: 3rem;
+    color: lightseagreen;
+}
+
+.card_presta:hover {
+    background-color: #de0e1e;
+    color: #fff;
+}
+
+.card_presta:hover .icon,
+.card_presta:hover .text_rouge {
+    color: #fff;
+}
+
+/* Sections a propos */
+.titre {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.accordion {
+    --bs-accordion-active-bg: #ffffff;
+    --bs-accordion-active-color: #000000;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-button.collapsed {
+    border: 1px solid #d8d8d8;
+}
+
+.accordion-collapse {
+    transition: all 0.3s;
+}
+
+/* Conserve l'effet original si :has est supporte */
+.accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+    border: 2px solid #00000049;
+    box-shadow: 5px 5px #de0e1f77;
+}
+
+/* Sections avis */
+.img-avis {
+    width: 65%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #de0e1e;
+}
+
+.card-avis {
+    padding: 1.5em 0.5em 0.5em;
+    border-radius: 2em;
+    text-align: center;
+    box-shadow: 0 5px 10px #de0e1e;
+}
+
+.card-title-avis {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/* Footer legacy */
+footer {
+    background-image: url("/img/Rectangle.png");
+}
+
+@media (max-width: 768px) {
+    .presta-vehicle-img {
+        max-width: 170px;
+    }
+}
+
+/* === TITRES === */
+h1,
+h2,
+h3,
+.fjf-title,
+.fjf-section-title {
+    color: var(--fjf-color-text);
+    letter-spacing: 0.01em;
+}
+
+/* === CLASSES RÉUTILISABLES (cartes / sections / alertes) === */
+.fjf-card,
+.fjf-panel,
+.fjf-rdv-form,
+.fjf-admin-table-wrapper {
+    background: var(--fjf-color-card);
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    box-shadow: var(--fjf-shadow-soft);
+}
+
+.fjf-section {
+    margin-bottom: var(--fjf-space-6);
+}
+
+.fjf-muted {
+    color: var(--fjf-color-text-soft);
+}
+
+.fjf-alert,
+.fjf-rdv-success {
+    border: 1px solid #bce3c7;
+    background: #ecfdf3;
+    color: #0f5132;
+    border-radius: var(--fjf-radius-sm);
+    padding: 12px 14px;
+}
+
+/* === HERO / BANNIÈRE (réutilisable) === */
+.fjf-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 100%);
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-lg);
+    padding: clamp(20px, 3vw, 38px);
+    box-shadow: var(--fjf-shadow-soft);
+    margin-bottom: var(--fjf-space-6);
+}
+
+.fjf-hero h1,
+.fjf-hero h2 {
+    margin: 0 0 8px;
+}
+
+.fjf-hero p {
+    margin: 0;
+    color: var(--fjf-color-text-soft);
+}
+
+/* === BOUTONS === */
+.fjf-btn,
+.fjf-rdv-btn,
+.fjf-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.fjf-btn:hover,
+.fjf-rdv-btn:hover,
+.fjf-actions .button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(15, 39, 71, 0.14);
+}
+
+.fjf-btn:focus-visible,
+.fjf-rdv-btn:focus-visible,
+.fjf-actions .button:focus-visible,
+.fjf-rdv-field input:focus,
+.fjf-rdv-field textarea:focus,
+.fjf-btn-voir:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--fjf-color-focus);
+}
+
+.fjf-btn-primary,
+.fjf-rdv-btn {
+    background: var(--fjf-color-primary);
+    border-color: var(--fjf-color-primary);
+    color: #fff;
+    padding: 11px 22px;
+}
+
+.fjf-btn-primary:hover,
+.fjf-rdv-btn:hover {
+    background: var(--fjf-color-primary-hover);
+    border-color: var(--fjf-color-primary-hover);
+}
+
+.fjf-btn-secondary {
+    background: #fff;
+    border-color: var(--fjf-color-border);
+    color: var(--fjf-color-text);
+    padding: 10px 18px;
+}
+
+/* === CARTES PROFIL / VEHICULE / RDV / DOCUMENTS (réutilisable) === */
+.fjf-profile-card,
+.fjf-vehicle-card,
+.fjf-appointment-card,
+.fjf-documents-card {
+    background: var(--fjf-color-card);
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    padding: var(--fjf-space-5);
+    box-shadow: var(--fjf-shadow-soft);
+}
+
+/* === FORMULAIRES === */
+.fjf-rdv-form {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(18px, 2.5vw, 30px);
+}
+
+.fjf-rdv-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+    margin-bottom: 14px;
+}
+
+.fjf-rdv-full {
+    grid-column: 1 / -1;
+}
+
+.fjf-rdv-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--fjf-color-text);
+}
+
+.fjf-optional {
+    font-weight: 500;
+    color: var(--fjf-color-text-soft);
+    font-style: normal;
+}
+
+.fjf-rdv-field input,
+.fjf-rdv-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid var(--fjf-color-border);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--fjf-color-text);
+    background: #fff;
+}
+
+.fjf-rdv-field textarea {
+    min-height: 132px;
+    resize: vertical;
+}
+
+/* === BLOCS / SECTIONS ADMIN === */
+.fjf-section-title {
+    margin-top: 26px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+}
+
+.fjf-titre-en-attente {
+    background: #fff8eb;
+    color: #8a5a00;
+    border-color: #f7d79f;
+}
+
+.fjf-titre-valide {
+    background: #ecfdf3;
+    color: #166534;
+    border-color: #a7f3c0;
+}
+
+.fjf-titre-refuse {
+    background: #fef2f2;
+    color: #991b1b;
+    border-color: #fecaca;
+}
+
+.fjf-vide {
+    color: var(--fjf-color-text-soft);
+    font-style: italic;
+    margin: 6px 0 24px;
+}
+
+/* === TABLEAUX === */
+.fjf-admin-table {
+    margin-top: 8px;
+    margin-bottom: 28px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--fjf-color-border);
+    border-radius: var(--fjf-radius-md);
+    overflow: hidden;
+    table-layout: fixed;
+    background: #fff;
+}
+
+.fjf-admin-table thead th {
+    background: #f3f5f8;
+    color: var(--fjf-color-text);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--fjf-color-border);
+}
+
+.fjf-admin-table th,
+.fjf-admin-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fjf-admin-table tbody tr:nth-child(even):not(.fjf-detail-row) {
+    background: #fbfcfe;
+}
+
+.fjf-admin-table tbody tr:hover:not(.fjf-detail-row) {
+    background: #f6f9ff;
+}
+
+/* Largeurs des colonnes */
+.col-client { width: 14%; }
+.col-tel { width: 12%; }
+.col-email { width: 17%; }
+.col-immat { width: 10%; }
+.col-msg { width: 16%; white-space: normal; }
+.col-date { width: 14%; }
+.col-statut { width: 8%; }
+.col-action { width: 19%; }
+
+/* Message compact */
+.fjf-msg-preview {
+    white-space: normal;
+}
+
+.fjf-extrait {
+    display: block;
+    font-size: 12px;
+    color: var(--fjf-color-text-soft);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.fjf-btn-voir {
+    background: #fff;
+    border: 1px solid var(--fjf-color-border);
+    color: var(--fjf-color-text);
+    border-radius: 999px;
+    font-size: 11px;
+    padding: 3px 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.fjf-btn-voir:hover {
+    background: #f3f5f8;
+    border-color: #c7d0da;
+}
+
+/* Ligne de détail du message */
+.fjf-detail-row td {
+    white-space: normal;
+}
+
+.fjf-detail-cell {
+    background: #f8fafc;
+    border-top: 1px dashed #c7d0da;
+    padding: 12px 16px !important;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--fjf-color-text);
+}
+
+/* === BADGES === */
+.fjf-statut {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.fjf-statut-en_attente {
+    background-color: #fff7e9;
+    color: #9a6700;
+    border-color: #fbd38d;
+}
+
+.fjf-statut-valide {
+    background-color: #ecfdf3;
+    color: #166534;
+    border-color: #86efac;
+}
+
+.fjf-statut-refuse {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+/* === BOUTONS D'ACTION === */
+.fjf-statut-cell {
+    padding-right: 2px;
+}
+
+.fjf-actions {
+    padding-left: 2px;
+    min-width: 170px;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fjf-actions .button {
+    font-size: 11px;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+.fjf-btn-en-attente.button {
+    background: #fff6e8;
+    border-color: #f7d79f;
+    color: #8a5a00;
+}
+
+.fjf-btn-en-attente.button:hover {
+    background: #fdecc8;
+    border-color: #f3c97d;
+    color: #704800;
+}
+
+.fjf-btn-valide.button {
+    background: #ecfdf3;
+    border-color: #86efac;
+    color: #166534;
+}
+
+.fjf-btn-valide.button:hover {
+    background: #d1fae5;
+    border-color: #6ee7b7;
+    color: #14532d;
+}
+
+.fjf-btn-refuse.button {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+.fjf-btn-refuse.button:hover {
+    background: #fee2e2;
+    border-color: #f87171;
+    color: #7f1d1d;
+}
+
+.button-link-delete {
+    background: var(--fjf-color-primary) !important;
+    border-color: var(--fjf-color-primary-hover) !important;
+    color: #fff !important;
+}
+
+.button-link-delete:hover {
+    background: var(--fjf-color-primary-hover) !important;
+    border-color: #9f0f18 !important;
+    color: #fff !important;
+}
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 900px) {
+    .fjf-admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .fjf-actions {
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 640px) {
+    .fjf-rdv-row {
+        grid-template-columns: 1fr;
+    }
+
+    .fjf-rdv-form {
+        padding: 16px;
+    }
+
+    .fjf-section-title {
+        font-size: 13px;
+    }
+}
